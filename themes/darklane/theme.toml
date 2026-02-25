@@ -1,0 +1,12 @@
+name = "Darklane"
+license = "MIT"
+licenselink = "https://github.com/hadella/darklane/blob/main/LICENSE"
+description = "A dark-themed blog layout for technical writing with support for code blocks and LaTeX"
+homepage = "https://github.com/hadella/darklane"
+tags = ["blog", "dark", "technical", "minimal"]
+features = ["syntax-highlighting", "latex", "responsive"]
+min_version = "0.112.0"
+
+[author]
+  name = "Justin Hadella"
+  homepage = "https://github.com/hadella"

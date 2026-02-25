@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<!-- Home page: Show recent posts with previews -->
+
+<section class="home-content">
+    <!-- Loop through paginated posts -->
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts") }} {{
+    range $paginator.Pages }} {{ partial "post-preview.html" . }} {{ end }}
+
+    <!-- Pagination controls (Previous/Next) -->
+    {{ if or $paginator.HasPrev $paginator.HasNext }}
+    <nav class="pagination">
+        {{ if $paginator.HasPrev }}
+        <a href="{{ $paginator.Prev.URL }}" class="prev">← Newer Posts</a>
+        {{ end }}
+
+        <!-- Page numbers -->
+        {{ range $paginator.Pagers }} {{ if eq . $paginator }}
+        <span class="active"><a href="{{ .URL }}">{{ .PageNumber }}</a></span>
+        {{ else }}
+        <a href="{{ .URL }}">{{ .PageNumber }}</a>
+        {{ end }} {{ end }} {{ if $paginator.HasNext }}
+        <a href="{{ $paginator.Next.URL }}" class="next">Older Posts →</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</section>
+
+{{ end }}

@@ -1,0 +1,19 @@
+{{- $color := .Get "color" | default "" | lower -}} {{- $colors := dict
+"magenta" "#C678DD" "cyan" "#39BAE6" "green" "#26a98b" "orange" "#FF8F40"
+"yellow" "#FFBF00" -}} {{- $headerColor := index $colors $color | default
+"#E6E6E6" -}} {{- $borderColor := index $colors $color | default "#1a1f26" -}}
+
+<div class="table-wrapper" style="overflow-x: auto; margin: 2rem 0">
+    <style>
+        .table-wrapper table {
+          border-color: {{ $borderColor }};
+        }
+        .table-wrapper table thead {
+          background-color: #0a0f14;
+        }
+        .table-wrapper table th {
+          color: {{ $headerColor }};
+        }
+    </style>
+    {{ .Inner | markdownify }}
+</div>

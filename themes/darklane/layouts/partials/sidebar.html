@@ -1,0 +1,62 @@
+<!-- SIDEBAR: Recent Posts, Categories, Tags, Year Archive -->
+
+<!-- Recent Posts Widget -->
+<div class="sidebar-widget">
+  <h3>Recent Posts</h3>
+  <ul>
+    <!-- Get the most recent posts (number from config) -->
+    {{ $recentCount := .Site.Params.recentPostsCount | default 5 }}
+    {{ range first $recentCount (where .Site.RegularPages "Type" "posts") }}
+      <li class="recent-post-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="recent-post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+
+<!-- Categories Widget -->
+{{ if .Site.Taxonomies.categories }}
+<div class="sidebar-widget">
+  <h3>Categories</h3>
+  <ul>
+    <!-- Sort categories alphabetically by name -->
+    {{ range .Site.Taxonomies.categories.Alphabetical }}
+      <li class="taxonomy-item">
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        <span class="taxonomy-count">{{ .Count }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+<!-- Tags Widget (cloud style) -->
+{{ if .Site.Taxonomies.tags }}
+<div class="sidebar-widget">
+  <h3>Tags</h3>
+  <div class="tag-cloud">
+    <!-- Sort tags alphabetically by name -->
+    {{ range .Site.Taxonomies.tags.Alphabetical }}
+      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+<!-- Year Archive Widget -->
+{{ if .Site.RegularPages }}
+<div class="sidebar-widget">
+  <h3>Archive</h3>
+  <ul>
+    <!-- Group posts by year and show count for each year -->
+    <!-- GroupByDate uses "2006" format to group by year -->
+    {{ range (.Site.RegularPages.GroupByDate "2006").Reverse }}
+      <li class="year-item">
+        <a href="{{ "/" | relURL }}{{ .Key }}/">{{ .Key }}</a>
+        <span class="year-count">{{ len .Pages }}</span>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

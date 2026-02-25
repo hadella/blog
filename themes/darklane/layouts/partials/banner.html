@@ -1,0 +1,31 @@
+<!-- Article Banner Logic
+     Priority: 1) Post-specific banner, 2) Category default, 3) Site default
+-->
+
+{{ $bannerPath := "" }}
+
+<!-- First: Check if post has a custom banner in front matter (and it's not empty) -->
+{{ if and .Params.banner (ne .Params.banner "") }}
+<!-- If banner path starts with /, it's relative to static/ -->
+<!-- Otherwise, it's relative to the post's bundle -->
+{{ if hasPrefix .Params.banner "/" }} {{ $bannerPath = .Params.banner }} {{ else
+}} {{ $bannerPath = printf "%s%s" .RelPermalink .Params.banner }} {{ end }}
+
+<!-- Second: Check for category-specific default banner -->
+{{ else if and .Params.categories (index .Params.categories 0) }}
+<!-- Try to find a banner named after the first category -->
+{{ $categoryName := index .Params.categories 0 | urlize }} {{ $categoryBanner :=
+printf "/images/banners/%s.jpg" $categoryName }}
+<!-- Note: fileExists doesn't work reliably in Hugo, so skip this check -->
+{{ $bannerPath = .Site.Params.defaultBanner | default
+"/images/default-banner.jpg" }}
+
+<!-- Third: Use site default banner -->
+{{ else }} {{ $bannerPath = .Site.Params.defaultBanner | default
+"/images/default-banner.jpg" }} {{ end }}
+
+<!-- Render the banner with title overlay -->
+<div class="article-banner">
+    <img src="{{ $bannerPath | relURL }}" alt="{{ .Title }}" />
+    <h1 class="banner-title">{{ .Title }}</h1>
+</div>

@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<!-- Individual Post/Page Layout -->
+
+<article class="post">
+  <!-- Banner with title overlay - only for posts, not pages -->
+  {{ if eq .Type "posts" }}
+    {{ partial "banner.html" . }}
+  {{ else }}
+    <!-- Simple title for pages -->
+    <h1>{{ .Title }}</h1>
+  {{ end }}
+
+  <!-- Post metadata - only show for posts -->
+  {{ if eq .Type "posts" }}
+  <div class="post-meta">
+    <span>Published: {{ .Date.Format "January 2, 2006" }}</span>
+
+    {{ if .Params.categories }}
+      <span>
+        Categories:
+        {{ range $index, $category := .Params.categories }}
+          {{ if $index }}, {{ end }}
+          <a href="{{ "/categories/" | relURL }}{{ $category | urlize }}/">{{ $category }}</a>
+        {{ end }}
+      </span>
+    {{ end }}
+
+    {{ if .Params.tags }}
+      <span>
+        Tags:
+        {{ range $index, $tag := .Params.tags }}
+          {{ if $index }}, {{ end }}
+          <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}/">{{ $tag }}</a>
+        {{ end }}
+      </span>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- Full post content -->
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+
+{{ end }}

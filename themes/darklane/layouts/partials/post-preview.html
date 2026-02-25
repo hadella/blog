@@ -1,0 +1,44 @@
+<!-- Post Preview - used on home page to show article summary -->
+
+<article class="post-preview">
+  <!-- Post title -->
+  <h2>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </h2>
+
+  <!-- Post metadata: date, categories, tags -->
+  <div class="meta">
+    <span>{{ .Date.Format "January 2, 2006" }}</span>
+
+    {{ if .Params.categories }}
+      <span>
+        {{ range $index, $category := .Params.categories }}
+          {{ if $index }}, {{ end }}
+          <a href="{{ "/categories/" | relURL }}{{ $category | urlize }}/">{{ $category }}</a>
+        {{ end }}
+      </span>
+    {{ end }}
+
+    {{ if .Params.tags }}
+      <span>
+        {{ range $index, $tag := .Params.tags }}
+          {{ if $index }}, {{ end }}
+          <a href="{{ "/tags/" | relURL }}{{ $tag | urlize }}/">{{ $tag }}</a>
+        {{ end }}
+      </span>
+    {{ end }}
+  </div>
+
+  <!-- Post summary/excerpt
+       Hugo automatically uses:
+       1. Content up to <!--more--> comment if present
+       2. .Summary field from front matter if defined
+       3. First ~70 words otherwise
+  -->
+  <div class="summary">
+    {{ .Summary }}
+  </div>
+
+  <!-- Read more link -->
+  <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+</article>

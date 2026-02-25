@@ -1,0 +1,27 @@
+{{- $src := .Get "src" -}} {{- $width := .Get "width" | default "800" -}} {{-
+$caption := .Get "caption" -}} {{- $alt := .Get "alt" | default $caption |
+default "" -}}
+
+<figure
+    class="img-figure"
+    style="max-width: {{ $width }}px; margin: 2rem auto;"
+>
+    <img
+        src="{{ $src }}"
+        alt="{{ $alt }}"
+        style="width: 100%; height: auto; border-radius: 4px; display: block"
+    />
+    {{- if $caption -}}
+    <figcaption
+        style="
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        "
+    >
+        {{ $caption }}
+    </figcaption>
+    {{- end -}}
+</figure>

@@ -1,0 +1,51 @@
+baseURL = "https://hadella.github.io/blog/"
+languageCode = "en-us"
+title = "Justin Hadella's Blog"
+theme = "darklane"
+
+# Number of posts to show on home page
+paginate = 5
+
+# Enable syntax highlighting
+[markup]
+  [markup.highlight]
+    # Use 'monokai' style for dark theme code blocks
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = false
+
+  [markup.goldmark.renderer]
+    # Allow HTML in markdown (needed for some formatting)
+    unsafe = true
+
+# Taxonomy configuration (categories and tags)
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Site parameters
+[params]
+  description = "Your blog description"
+  author = "Justin Hadella"
+
+  # Number of recent posts to show in sidebar
+  recentPostsCount = 5
+
+  # Default banner image if post doesn't specify one
+  defaultBanner = "/images/default-banner.jpg"
+
+  # Social links (optional - uncomment and fill in as needed)
+  # github = "hadella"
+  # email = "justin.hadela@gmail.com"
+
+# Main menu configuration
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2

@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<!-- List page layout - used for category, tag, and taxonomy pages -->
+
+<header class="list-header">
+    <h1>{{ .Title }}</h1>
+    {{ if .Description }}
+    <p>{{ .Description }}</p>
+    {{ end }}
+
+    <!-- Show count of posts in this category/tag -->
+    {{ if .Data.Pages }}
+    <p style="color: #888">
+        {{ len .Data.Pages }} {{ if eq (len .Data.Pages) 1 }}post{{ else
+        }}posts{{ end }}
+    </p>
+    {{ end }}
+</header>
+
+<!-- List all posts in this category/tag -->
+<section class="list-content">
+    {{ range .Data.Pages }} {{ partial "post-preview.html" . }} {{ end }}
+</section>
+
+{{ end }}

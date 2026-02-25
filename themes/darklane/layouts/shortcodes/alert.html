@@ -1,0 +1,35 @@
+{{- $type := .Get 0 | default "" | lower -}} {{- if eq $type "" -}} {{/* No
+label - simple aside-style box */}}
+<div
+    class="alert-box"
+    style="
+        background-color: #11151c;
+        border-left: 3px solid #888;
+        padding: 1rem 1.5rem;
+        margin: 2rem 0;
+        border-radius: 4px;
+        color: #c7c7c7;
+    "
+>
+    {{ .Inner | markdownify }}
+</div>
+{{- else -}} {{/* Labeled alert boxes */}} {{- $colors := dict "warning" (dict
+"border" "#FF8F40" "bg" "#11151c" "text" "#FF8F40") "info" (dict "border"
+"#39BAE6" "bg" "#11151c" "text" "#39BAE6") "note" (dict "border" "#26a98b" "bg"
+"#11151c" "text" "#26a98b") "error" (dict "border" "#f92672" "bg" "#11151c"
+"text" "#f92672") "important" (dict "border" "#FFBF00" "bg" "#11151c" "text"
+"#FFBF00") -}} {{- $color := index $colors $type | default (index $colors
+"note") -}}
+
+<div
+    class="alert alert-{{ $type }}"
+    style="border-left: 3px solid {{ $color.border }}; background-color: {{ $color.bg }}; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
+>
+    <div
+        style="color: {{ $color.text }}; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;"
+    >
+        {{ $type }}
+    </div>
+    <div style="color: #c7c7c7">{{ .Inner | markdownify }}</div>
+</div>
+{{- end -}}

@@ -1,0 +1,65 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Page title -->
+  <title>
+    {{- if .IsHome -}}
+      {{ .Site.Title }}
+    {{- else -}}
+      {{ .Title }} | {{ .Site.Title }}
+    {{- end -}}
+  </title>
+
+  <!-- Meta description -->
+  {{ if .Description }}
+    <meta name="description" content="{{ .Description }}">
+  {{ else if .Site.Params.description }}
+    <meta name="description" content="{{ .Site.Params.description }}">
+  {{ end }}
+
+  <!-- Author -->
+  {{ if .Site.Params.author }}
+    <meta name="author" content="{{ .Site.Params.author }}">
+  {{ end }}
+
+  <!-- Open Graph / Social Media meta tags -->
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ if .Description }}
+    <meta property="og:description" content="{{ .Description }}">
+  {{ end }}
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="{{ "css/darklane.css" | relURL }}">
+
+  <!-- Syntax highlighting stylesheet -->
+  <link rel="stylesheet" href="{{ "css/syntax.css" | relURL }}">
+
+  <!-- KaTeX for LaTeX math rendering -->
+  <!-- Using client-side rendering for simplicity - no build complexity -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+        crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+          integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+          crossorigin="anonymous"></script>
+
+  <!-- KaTeX auto-render extension for automatic LaTeX detection -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},   // Display math
+              {left: '$', right: '$', display: false}      // Inline math
+            ]
+          });"></script>
+
+  <!-- RSS Feed -->
+  {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+</head>
