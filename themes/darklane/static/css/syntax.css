@@ -3,223 +3,223 @@
 
 /* Background */
 .bg {
-    background-color: #11151c;
+    background-color: var(--color-bg-dark);
 }
 
 /* PreWrapper */
 .chroma {
-    background-color: #11151c;
-    color: #c7c7c7;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
 }
 
-/* Keyword (if, def, class, import, etc) - Orange */
+/* Keyword (if, def, class, import, etc) */
 .chroma .k {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .kc {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .kd {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .kn {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .kp {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .kr {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .kt {
-    color: #39bae6;
+    color: var(--color-primary);
 }
 
 /* Function names - Cyan */
 .chroma .nf {
-    color: #39bae6;
+    color: var(--color-primary);
 }
 .chroma .fm {
-    color: #39bae6;
+    color: var(--color-primary);
 }
 
-/* Class names - Orange */
+/* Class names */
 .chroma .nc {
-    color: #ffb454;
+    color: var(--color-accent-2);
 }
 
 /* Variables and names - Gray (most common) */
 .chroma .n {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .na {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .nb {
-    color: #39bae6;
+    color: var(--color-primary);
 }
 .chroma .bp {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .no {
-    color: #ffb454;
+    color: var(--color-syntax-amber);
 }
 .chroma .nd {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 .chroma .ni {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .ne {
-    color: #ffb454;
+    color: var(--color-syntax-amber);
 }
 .chroma .nl {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .nn {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .nx {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .py {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .nt {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .nv {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .vc {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .vg {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .vi {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 .chroma .vm {
-    color: #c7c7c7;
+    color: var(--color-text);
 }
 
 /* Strings - Green/Teal */
 .chroma .s {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .sa {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .sb {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .sc {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .dl {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .sd {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .s2 {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .se {
-    color: #ffb454;
+    color: var(--color-syntax-amber);
 }
 .chroma .sh {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .si {
-    color: #ffb454;
+    color: var(--color-syntax-amber);
 }
 .chroma .sx {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .sr {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .s1 {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .ss {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 
 /* Numbers - Magenta */
 .chroma .m {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 .chroma .mb {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 .chroma .mf {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 .chroma .mh {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 .chroma .mi {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 .chroma .il {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 .chroma .mo {
-    color: #c678dd;
+    color: var(--color-accent-1);
 }
 
-/* Operators - Orange */
+/* Operators */
 .chroma .o {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 .chroma .ow {
-    color: #ff8f40;
+    color: var(--color-accent-2);
 }
 
-/* Comments - Muted gray */
+/* Comments */
 .chroma .c {
-    color: #5c6370;
+    color: var(--color-text-comment);
     font-style: italic;
 }
 .chroma .ch {
-    color: #5c6370;
+    color: var(--color-text-comment);
     font-style: italic;
 }
 .chroma .cm {
-    color: #5c6370;
+    color: var(--color-text-comment);
     font-style: italic;
 }
 .chroma .c1 {
-    color: #5c6370;
+    color: var(--color-text-comment);
     font-style: italic;
 }
 .chroma .cs {
-    color: #5c6370;
+    color: var(--color-text-comment);
     font-style: italic;
 }
 .chroma .cp {
-    color: #5c6370;
+    color: var(--color-text-comment);
     font-style: italic;
 }
 .chroma .cpf {
-    color: #5c6370;
+    color: var(--color-text-comment);
     font-style: italic;
 }
 
 /* Error */
 .chroma .err {
-    color: #f92672;
+    color: var(--color-error);
 }
 
 /* Line numbers */
 .chroma .lnt {
-    color: #5c6370;
+    color: var(--color-text-comment);
 }
 .chroma .ln {
-    color: #5c6370;
+    color: var(--color-text-comment);
 }
 
 /* Other elements */
@@ -245,7 +245,7 @@
     border: 0;
 }
 .chroma .hl {
-    background-color: #2a3340;
+    background-color: var(--color-syntax-highlight);
 }
 .chroma .line {
     display: flex;
@@ -261,7 +261,7 @@
 .chroma .g {
 }
 .chroma .gd {
-    color: #f92672;
+    color: var(--color-error);
 }
 .chroma .ge {
     font-style: italic;
@@ -271,7 +271,7 @@
 .chroma .gh {
 }
 .chroma .gi {
-    color: #26a98b;
+    color: var(--color-secondary);
 }
 .chroma .go {
 }

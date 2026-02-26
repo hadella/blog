@@ -1,55 +1,6 @@
 {{- $summary := .Get 0 | default "Click to expand" -}}
 
-<details
-    class="details-box"
-    style="
-        background-color: #11151c;
-        border: 1px solid #1a1f26;
-        border-radius: 4px;
-        padding: 1rem 1.5rem;
-        margin: 2rem 0;
-    "
->
-    <summary
-        style="
-            cursor: pointer;
-            font-weight: 600;
-            color: #39bae6;
-            user-select: none;
-            margin-bottom: 0;
-        "
-    >
-        {{ $summary }}
-    </summary>
-    <div
-        style="
-            margin-top: 1rem;
-            color: #c7c7c7;
-            padding-top: 1rem;
-            border-top: 1px solid #1a1f26;
-        "
-    >
-        {{ .Inner | markdownify }}
-    </div>
+<details class="details-box">
+    <summary class="details-summary">{{ $summary }}</summary>
+    <div class="details-content">{{ .Inner | markdownify }}</div>
 </details>
-
-<style>
-    /* Remove default triangle and add custom arrow */
-    details summary {
-        list-style: none;
-    }
-    details summary::-webkit-details-marker {
-        display: none;
-    }
-    details summary::before {
-        content: "▶ ";
-        display: inline-block;
-        transition: transform 0.2s;
-    }
-    details[open] summary::before {
-        transform: rotate(90deg);
-    }
-    details summary:hover {
-        color: #c678dd !important;
-    }
-</style>

@@ -367,19 +367,7 @@
 </tbody>
 </table>
 <h2 id="colored-table">Colored Table</h2>
-<div class="table-wrapper" style="overflow-x: auto; margin: 2rem 0">
-    <style>
-        .table-wrapper table {
-          border-color: #39BAE6;
-        }
-        .table-wrapper table thead {
-          background-color: #0a0f14;
-        }
-        .table-wrapper table th {
-          color: #39BAE6;
-        }
-    </style>
-    <table>
+<div class="table-wrapper table-cyan"><table>
 <thead>
 <tr>
 <th style="text-align:left">Name</th>
@@ -410,7 +398,6 @@
 </tr>
 </tbody>
 </table>
-
 </div>
 
 <h2 id="quote-blocks">Quote Blocks</h2>
@@ -424,76 +411,28 @@
 </span></span></code></pre></div></blockquote>
 <h2 id="alert-shortcode-callouts">Alert Shortcode Callouts</h2>
 <p>The <code>{{/* alert */}}</code> shortcode lets us add something similar to a quote block but includes some keyword like &lsquo;warning&rsquo; or &lsquo;info&rsquo;; it also gives a splash of color.</p>
-<div
-    class="alert alert-warning"
-    style="border-left: 3px solid #FF8F40; background-color: #11151c; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #FF8F40; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;"
-    >
-        warning
-    </div>
-    <div style="color: #c7c7c7">This is a warning message!</div>
+<div class="alert alert-warning">
+    <div class="alert-label">warning</div>
+    <div class="alert-content">This is a warning message!</div>
 </div>
-<div
-    class="alert alert-info"
-    style="border-left: 3px solid #39BAE6; background-color: #11151c; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #39BAE6; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;"
-    >
-        info
-    </div>
-    <div style="color: #c7c7c7">This is informational text.</div>
+<div class="alert alert-info">
+    <div class="alert-label">info</div>
+    <div class="alert-content">This is informational text.</div>
 </div>
-<div
-    class="alert alert-note"
-    style="border-left: 3px solid #26a98b; background-color: #11151c; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #26a98b; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;"
-    >
-        note
-    </div>
-    <div style="color: #c7c7c7">This is an important note.</div>
+<div class="alert alert-note">
+    <div class="alert-label">note</div>
+    <div class="alert-content">This is an important note.</div>
 </div>
-<div
-    class="alert alert-error"
-    style="border-left: 3px solid #f92672; background-color: #11151c; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #f92672; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;"
-    >
-        error
-    </div>
-    <div style="color: #c7c7c7">Something went wrong!</div>
+<div class="alert alert-error">
+    <div class="alert-label">error</div>
+    <div class="alert-content">Something went wrong!</div>
 </div>
-<div
-    class="alert alert-important"
-    style="border-left: 3px solid #FFBF00; background-color: #11151c; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #FFBF00; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.05em; margin-bottom: 0.5rem;"
-    >
-        important
-    </div>
-    <div style="color: #c7c7c7">Something important</div>
+<div class="alert alert-important">
+    <div class="alert-label">important</div>
+    <div class="alert-content">Something important</div>
 </div>
 <p>We can also do boring <em>alerts</em>.</p>
-
-<div
-    class="alert-box"
-    style="
-        background-color: #11151c;
-        border-left: 3px solid #888;
-        padding: 1rem 1.5rem;
-        margin: 2rem 0;
-        border-radius: 4px;
-        color: #c7c7c7;
-    "
->
-    An unlabeled alert isn&rsquo;t colored
-</div>
+<div class="alert-box">An unlabeled alert isn&rsquo;t colored</div>
 <h2 id="image-shortcode">Image Shortcode</h2>
 <p>The img shortcode handles consistent image sizing and optional captions.</p>
 <p>Basic usage (800px width default):</p>
@@ -504,25 +443,8 @@
 <pre tabindex="0"><code>{{&lt; img src=&#34;images/photo.png&#34; caption=&#34;Associated B7&#34; &gt;}}
 </code></pre><p>Full example with all options:</p>
 <pre tabindex="0"><code>{{&lt; img src=&#34;images/photo.png&#34; width=&#34;700&#34; caption=&#34;Davide Ongaro&#39;s Associated B7&#34; alt=&#34;Associated B7&#34; &gt;}}
-</code></pre><figure
-    class="img-figure"
-    style="max-width: 700px; margin: 2rem auto;"
->
-    <img
-        src="images/photo.png"
-        alt="Associated B7"
-        style="width: 100%; height: auto; border-radius: 4px; display: block"
-    /><figcaption
-        style="
-            text-align: center;
-            color: #888;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            font-style: italic;
-        "
-    >
-        Davide Ongaro&#39;s Associated B7
-    </figcaption></figure>
+</code></pre><figure class="img-figure" style="--img-width: 700px;">
+    <img src="images/photo.png" alt="Associated B7" /><figcaption>Davide Ongaro&#39;s Associated B7</figcaption></figure>
 
 <blockquote>
 <p>Make sure to remove the <code>/* */</code> to actually use them. They must be included though
@@ -534,86 +456,51 @@ the comments to show the code block view when the <code>/* */</code> were in pla
 <pre tabindex="0"><code>{{&lt; highlight tip &gt;}}
 Measure twice. Cut once.
 {{&lt; /highlight &gt;}}
-</code></pre><div
-    class="highlight-box"
-    style="background-color: #11151c; border: 2px solid #39BAE6; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #39BAE6; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;"
-    >
-        <span style="font-size: 1rem; margin-right: 0.5rem"
-            >★</span
-        >tip
+</code></pre><div class="highlight-box highlight-tip">
+    <div class="highlight-label">
+        <span class="highlight-icon"></span>tip
     </div>
-    <div style="color: #c7c7c7">Measure twice. Cut once.</div>
+    <div class="highlight-content">Measure twice. Cut once.</div>
 </div>
 
 <pre tabindex="0"><code>{{&lt; highlight warning &gt;}}
 Don&#39;t over-tighten gear mesh else you&#39;ll melt the spur or worse.
 {{&lt; /highlight &gt;}}
-</code></pre><div
-    class="highlight-box"
-    style="background-color: #11151c; border: 2px solid #FF8F40; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #FF8F40; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;"
-    >
-        <span style="font-size: 1rem; margin-right: 0.5rem"
-            >⚠</span
-        >warning
+</code></pre><div class="highlight-box highlight-warning">
+    <div class="highlight-label">
+        <span class="highlight-icon"></span>warning
     </div>
-    <div style="color: #c7c7c7">Don&rsquo;t over-tighten gear mesh else you&rsquo;ll melt the spur or worse.</div>
+    <div class="highlight-content">Don&rsquo;t over-tighten gear mesh else you&rsquo;ll melt the spur or worse.</div>
 </div>
 
 <pre tabindex="0"><code>{{&lt; highlight success &gt;}}
 After following these steps, the car ran perfectly!
 {{&lt; /highlight &gt;}}
-</code></pre><div
-    class="highlight-box"
-    style="background-color: #11151c; border: 2px solid #26a98b; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #26a98b; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;"
-    >
-        <span style="font-size: 1rem; margin-right: 0.5rem"
-            >✓</span
-        >success
+</code></pre><div class="highlight-box highlight-success">
+    <div class="highlight-label">
+        <span class="highlight-icon"></span>success
     </div>
-    <div style="color: #c7c7c7">After following these steps, the car ran perfectly!</div>
+    <div class="highlight-content">After following these steps, the car ran perfectly!</div>
 </div>
 
 <pre tabindex="0"><code>{{&lt; highlight error &gt;}}
 Don&#39;t reverse polarity on Lipo batteries!
 {{&lt; /highlight &gt;}}
-</code></pre><div
-    class="highlight-box"
-    style="background-color: #11151c; border: 2px solid #f92672; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #f92672; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;"
-    >
-        <span style="font-size: 1rem; margin-right: 0.5rem"
-            >✗</span
-        >error
+</code></pre><div class="highlight-box highlight-error">
+    <div class="highlight-label">
+        <span class="highlight-icon"></span>error
     </div>
-    <div style="color: #c7c7c7">Don&rsquo;t reverse polarity on Lipo batteries!</div>
+    <div class="highlight-content">Don&rsquo;t reverse polarity on Lipo batteries!</div>
 </div>
 
 <pre tabindex="0"><code>{{&lt; highlight important &gt;}}
 Some important info to share
 {{&lt; /highlight &gt;}}
-</code></pre><div
-    class="highlight-box"
-    style="background-color: #11151c; border: 2px solid #FFBF00; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: #FFBF00; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;"
-    >
-        <span style="font-size: 1rem; margin-right: 0.5rem"
-            >⚡</span
-        >important
+</code></pre><div class="highlight-box highlight-important">
+    <div class="highlight-label">
+        <span class="highlight-icon"></span>important
     </div>
-    <div style="color: #c7c7c7">Some important info to share</div>
+    <div class="highlight-content">Some important info to share</div>
 </div>
 
 <h2 id="details-shortcode">Details Shortcode</h2>
@@ -630,120 +517,22 @@ Servo: 25kg torque metal gear
 Battery: 2S 5000mAh LiPo
 Pinion/Spur: 22T / 84T (3.82:1 ratio))](Motor: 17.5T brushless
 {{&lt; /details &gt;}}
-</code></pre><details
-    class="details-box"
-    style="
-        background-color: #11151c;
-        border: 1px solid #1a1f26;
-        border-radius: 4px;
-        padding: 1rem 1.5rem;
-        margin: 2rem 0;
-    "
->
-    <summary
-        style="
-            cursor: pointer;
-            font-weight: 600;
-            color: #39bae6;
-            user-select: none;
-            margin-bottom: 0;
-        "
-    >
-        Technical Specifications
-    </summary>
-    <div
-        style="
-            margin-top: 1rem;
-            color: #c7c7c7;
-            padding-top: 1rem;
-            border-top: 1px solid #1a1f26;
-        "
-    >
-        <ul>
+</code></pre><details class="details-box">
+    <summary class="details-summary">Technical Specifications</summary>
+    <div class="details-content"><ul>
 <li>Motor: 17.5T brushless</li>
 <li>ESC: 120A with 6V BEC</li>
 <li>Servo: 25kg torque metal gear</li>
 <li>Battery: 2S 5000mAh LiPo</li>
 <li>Pinion/Spur: 22T / 84T (3.82:1 ratio)</li>
 </ul>
-
-    </div>
+</div>
 </details>
 
-<style>
-     
-    details summary {
-        list-style: none;
-    }
-    details summary::-webkit-details-marker {
-        display: none;
-    }
-    details summary::before {
-        content: "▶ ";
-        display: inline-block;
-        transition: transform 0.2s;
-    }
-    details[open] summary::before {
-        transform: rotate(90deg);
-    }
-    details summary:hover {
-        color: #c678dd !important;
-    }
-</style>
-
-<details
-    class="details-box"
-    style="
-        background-color: #11151c;
-        border: 1px solid #1a1f26;
-        border-radius: 4px;
-        padding: 1rem 1.5rem;
-        margin: 2rem 0;
-    "
->
-    <summary
-        style="
-            cursor: pointer;
-            font-weight: 600;
-            color: #39bae6;
-            user-select: none;
-            margin-bottom: 0;
-        "
-    >
-        Why I chose these parts
-    </summary>
-    <div
-        style="
-            margin-top: 1rem;
-            color: #c7c7c7;
-            padding-top: 1rem;
-            border-top: 1px solid #1a1f26;
-        "
-    >
-        I went with a 17.5T motor because it offers a good balance between speed and runtime. The 120A ESC is probably overkill, but better safe than sorry when running LiPo batteries. The servo needed to be metal gear to handle the forces from the heavy chassis.
-    </div>
+<details class="details-box">
+    <summary class="details-summary">Why I chose these parts</summary>
+    <div class="details-content">I went with a 17.5T motor because it offers a good balance between speed and runtime. The 120A ESC is probably overkill, but better safe than sorry when running LiPo batteries. The servo needed to be metal gear to handle the forces from the heavy chassis.</div>
 </details>
-
-<style>
-     
-    details summary {
-        list-style: none;
-    }
-    details summary::-webkit-details-marker {
-        display: none;
-    }
-    details summary::before {
-        content: "▶ ";
-        display: inline-block;
-        transition: transform 0.2s;
-    }
-    details[open] summary::before {
-        transform: rotate(90deg);
-    }
-    details summary:hover {
-        color: #c678dd !important;
-    }
-</style>
 
 <h2 id="code-blocks">Code Blocks</h2>
 <p>Use triple backticks with a language identifier:</p>
@@ -764,16 +553,8 @@ Pinion/Spur: 22T / 84T (3.82:1 ratio))](Motor: 17.5T brushless
 </span></span><span class="line hl"><span class="cl">    <span class="k">return</span> <span class="n">result</span>   <span class="c1"># This line is highlighted too</span>
 </span></span></code></pre></div><h2 id="tab-groups">Tab Groups</h2>
 <p>Tab groups can be used for things like showing similar code in multiple programming languages.</p>
-<div class="tab-group" id="tabs-1771989667" style="margin: 2rem 0">
-    <div
-        class="tab-buttons"
-        style="
-            display: flex;
-            gap: 0.5rem;
-            border-bottom: 2px solid #1a1f26;
-            margin-bottom: 1rem;
-        "
-    >
+<div class="tab-group" id="tabs-1772065370">
+    <div class="tab-buttons">
         
     </div>
     <div class="tab-content">
@@ -803,7 +584,7 @@ Pinion/Spur: 22T / 84T (3.82:1 ratio))](Motor: 17.5T brushless
 
 <script>
     (function () {
-        const tabGroup = document.getElementById("tabs-1771989667");
+        const tabGroup = document.getElementById("tabs-1772065370");
         const buttons = tabGroup.querySelector(".tab-buttons");
         const content = tabGroup.querySelector(".tab-content");
         const tabs = content.querySelectorAll(".tab-pane");
@@ -814,12 +595,9 @@ Pinion/Spur: 22T / 84T (3.82:1 ratio))](Motor: 17.5T brushless
             const btn = document.createElement("button");
             btn.textContent = title;
             btn.className = "tab-btn";
-            btn.style.cssText =
-                "background: #11151c; border: none; color: #888; padding: 0.75rem 1.5rem; cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.2s;";
 
             if (index === 0) {
-                btn.style.color = "#39BAE6";
-                btn.style.borderBottomColor = "#39BAE6";
+                btn.classList.add("active");
                 tab.style.display = "block";
             } else {
                 tab.style.display = "none";
@@ -827,28 +605,14 @@ Pinion/Spur: 22T / 84T (3.82:1 ratio))](Motor: 17.5T brushless
 
             btn.addEventListener("click", () => {
                 
-                buttons.querySelectorAll(".tab-btn").forEach((b) => {
-                    b.style.color = "#888";
-                    b.style.borderBottomColor = "transparent";
-                });
+                buttons
+                    .querySelectorAll(".tab-btn")
+                    .forEach((b) => b.classList.remove("active"));
                 tabs.forEach((t) => (t.style.display = "none"));
 
                 
-                btn.style.color = "#39BAE6";
-                btn.style.borderBottomColor = "#39BAE6";
+                btn.classList.add("active");
                 tab.style.display = "block";
-            });
-
-            btn.addEventListener("mouseenter", () => {
-                if (btn.style.color !== "rgb(57, 186, 230)") {
-                    btn.style.color = "#C678DD";
-                }
-            });
-
-            btn.addEventListener("mouseleave", () => {
-                if (btn.style.color !== "rgb(57, 186, 230)") {
-                    btn.style.color = "#888";
-                }
             });
 
             buttons.appendChild(btn);

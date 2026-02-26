@@ -1,20 +1,8 @@
-{{- $type := .Get 0 | default "tip" | lower -}} {{- $colors := dict "tip" (dict
-"border" "#39BAE6" "text" "#39BAE6" "icon" "★") "warning" (dict "border"
-"#FF8F40" "text" "#FF8F40" "icon" "⚠") "success" (dict "border" "#26a98b" "text"
-"#26a98b" "icon" "✓") "error" (dict "border" "#f92672" "text" "#f92672" "icon"
-"✗") "important" (dict "border" "#FFBF00" "text" "#FFBF00" "icon" "⚡") -}} {{-
-$colorScheme := index $colors $type | default (index $colors "tip") -}}
+{{- $type := .Get 0 | default "tip" | lower -}}
 
-<div
-    class="highlight-box"
-    style="background-color: #11151c; border: 2px solid {{ $colorScheme.border }}; padding: 1rem 1.5rem; margin: 2rem 0; border-radius: 4px;"
->
-    <div
-        style="color: {{ $colorScheme.text }}; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; font-size: 0.9rem;"
-    >
-        <span style="font-size: 1rem; margin-right: 0.5rem"
-            >{{ $colorScheme.icon }}</span
-        >{{ $type }}
+<div class="highlight-box highlight-{{ $type }}">
+    <div class="highlight-label">
+        <span class="highlight-icon"></span>{{ $type }}
     </div>
-    <div style="color: #c7c7c7">{{ .Inner | markdownify }}</div>
+    <div class="highlight-content">{{ .Inner | markdownify }}</div>
 </div>
