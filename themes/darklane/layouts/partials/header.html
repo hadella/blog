@@ -1,23 +1,23 @@
 <header>
-  <div class="container">
-    <div class="site-header">
-      <!-- Site title/logo -->
-      <h1 class="site-title">
-        <a href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
-      </h1>
+    <div class="container">
+        <div class="site-header">
+            <!-- Site title/logo -->
+            <h1 class="site-title">
+                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+            </h1>
 
-      <!-- Main navigation menu -->
-      <nav>
-        {{ if .Site.Menus.main }}
-          <ul>
-            {{ range .Site.Menus.main }}
-              <li>
-                <a href="{{ .URL | relURL }}">{{ .Name }}</a>
-              </li>
-            {{ end }}
-          </ul>
-        {{ end }}
-      </nav>
+            <!-- Main navigation menu -->
+            <nav>
+                {{ if .Site.Menus.main }}
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    <li>
+                        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </nav>
+        </div>
     </div>
-  </div>
 </header>
