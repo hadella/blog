@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workflow on Justin Hadella&#39;s Blog</title>
+    <link>https://hadella.github.io/blog/tags/workflow/</link>
+    <description>Recent content in Workflow on Justin Hadella&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hadella.github.io/blog/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Managing This Blog</title>
+      <link>https://hadella.github.io/blog/posts/managing-this-blog/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://hadella.github.io/blog/posts/managing-this-blog/</guid>
+      <description>&lt;p&gt;This is the first post on my new blog, and fittingly, it&amp;rsquo;s about how to manage the blog itself. I wanted to document the workflow so future-me doesn&amp;rsquo;t have to remember all the details. This guide demonstrates how to use markdown and Hugo shortcodes to write useful and nice-looking posts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

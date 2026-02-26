@@ -1,0 +1,290 @@
+/* Darklane Syntax Highlighting - Cool color scheme */
+/* Matches Ayu Dark usage: mostly orange/gray, then cyan/magenta, minimal green */
+
+/* Background */
+.bg {
+    background-color: var(--color-bg-dark);
+}
+
+/* PreWrapper */
+.chroma {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text);
+}
+
+/* Keyword (if, def, class, import, etc) */
+.chroma .k {
+    color: var(--color-accent-2);
+}
+.chroma .kc {
+    color: var(--color-accent-2);
+}
+.chroma .kd {
+    color: var(--color-accent-2);
+}
+.chroma .kn {
+    color: var(--color-accent-2);
+}
+.chroma .kp {
+    color: var(--color-accent-2);
+}
+.chroma .kr {
+    color: var(--color-accent-2);
+}
+.chroma .kt {
+    color: var(--color-primary);
+}
+
+/* Function names - Cyan */
+.chroma .nf {
+    color: var(--color-primary);
+}
+.chroma .fm {
+    color: var(--color-primary);
+}
+
+/* Class names */
+.chroma .nc {
+    color: var(--color-accent-2);
+}
+
+/* Variables and names - Gray (most common) */
+.chroma .n {
+    color: var(--color-text);
+}
+.chroma .na {
+    color: var(--color-text);
+}
+.chroma .nb {
+    color: var(--color-primary);
+}
+.chroma .bp {
+    color: var(--color-text);
+}
+.chroma .no {
+    color: var(--color-syntax-amber);
+}
+.chroma .nd {
+    color: var(--color-accent-1);
+}
+.chroma .ni {
+    color: var(--color-text);
+}
+.chroma .ne {
+    color: var(--color-syntax-amber);
+}
+.chroma .nl {
+    color: var(--color-text);
+}
+.chroma .nn {
+    color: var(--color-text);
+}
+.chroma .nx {
+    color: var(--color-text);
+}
+.chroma .py {
+    color: var(--color-text);
+}
+.chroma .nt {
+    color: var(--color-accent-2);
+}
+.chroma .nv {
+    color: var(--color-text);
+}
+.chroma .vc {
+    color: var(--color-text);
+}
+.chroma .vg {
+    color: var(--color-text);
+}
+.chroma .vi {
+    color: var(--color-text);
+}
+.chroma .vm {
+    color: var(--color-text);
+}
+
+/* Strings - Green/Teal */
+.chroma .s {
+    color: var(--color-secondary);
+}
+.chroma .sa {
+    color: var(--color-secondary);
+}
+.chroma .sb {
+    color: var(--color-secondary);
+}
+.chroma .sc {
+    color: var(--color-secondary);
+}
+.chroma .dl {
+    color: var(--color-secondary);
+}
+.chroma .sd {
+    color: var(--color-secondary);
+}
+.chroma .s2 {
+    color: var(--color-secondary);
+}
+.chroma .se {
+    color: var(--color-syntax-amber);
+}
+.chroma .sh {
+    color: var(--color-secondary);
+}
+.chroma .si {
+    color: var(--color-syntax-amber);
+}
+.chroma .sx {
+    color: var(--color-secondary);
+}
+.chroma .sr {
+    color: var(--color-secondary);
+}
+.chroma .s1 {
+    color: var(--color-secondary);
+}
+.chroma .ss {
+    color: var(--color-secondary);
+}
+
+/* Numbers - Magenta */
+.chroma .m {
+    color: var(--color-accent-1);
+}
+.chroma .mb {
+    color: var(--color-accent-1);
+}
+.chroma .mf {
+    color: var(--color-accent-1);
+}
+.chroma .mh {
+    color: var(--color-accent-1);
+}
+.chroma .mi {
+    color: var(--color-accent-1);
+}
+.chroma .il {
+    color: var(--color-accent-1);
+}
+.chroma .mo {
+    color: var(--color-accent-1);
+}
+
+/* Operators */
+.chroma .o {
+    color: var(--color-accent-2);
+}
+.chroma .ow {
+    color: var(--color-accent-2);
+}
+
+/* Comments */
+.chroma .c {
+    color: var(--color-text-comment);
+    font-style: italic;
+}
+.chroma .ch {
+    color: var(--color-text-comment);
+    font-style: italic;
+}
+.chroma .cm {
+    color: var(--color-text-comment);
+    font-style: italic;
+}
+.chroma .c1 {
+    color: var(--color-text-comment);
+    font-style: italic;
+}
+.chroma .cs {
+    color: var(--color-text-comment);
+    font-style: italic;
+}
+.chroma .cp {
+    color: var(--color-text-comment);
+    font-style: italic;
+}
+.chroma .cpf {
+    color: var(--color-text-comment);
+    font-style: italic;
+}
+
+/* Error */
+.chroma .err {
+    color: var(--color-error);
+}
+
+/* Line numbers */
+.chroma .lnt {
+    color: var(--color-text-comment);
+}
+.chroma .ln {
+    color: var(--color-text-comment);
+}
+
+/* Other elements */
+.chroma .x {
+}
+.chroma .cl {
+}
+.chroma .lnlinks {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+.chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.chroma .hl {
+    background-color: var(--color-syntax-highlight);
+}
+.chroma .line {
+    display: flex;
+}
+.chroma .p {
+}
+.chroma .l {
+}
+.chroma .ld {
+}
+
+/* Generic */
+.chroma .g {
+}
+.chroma .gd {
+    color: var(--color-error);
+}
+.chroma .ge {
+    font-style: italic;
+}
+.chroma .gr {
+}
+.chroma .gh {
+}
+.chroma .gi {
+    color: var(--color-secondary);
+}
+.chroma .go {
+}
+.chroma .gp {
+}
+.chroma .gs {
+    font-weight: bold;
+}
+.chroma .gu {
+}
+.chroma .gt {
+}
+.chroma .gl {
+}
+.chroma .w {
+}
