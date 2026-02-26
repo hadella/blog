@@ -54,6 +54,30 @@
   <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/index.xml" title="Justin Hadella's Blog" />
   </head>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('pre > code[class*="language-"]').forEach(function(codeBlock) {
+        const pre = codeBlock.parentElement;
+        const className = codeBlock.className;
+        const langMatch = className.match(/language-(\w+)/);
+
+        if (langMatch) {
+            const lang = langMatch[1];
+            const wrapper = document.createElement('div');
+            wrapper.className = 'code-block-wrapper';
+
+            const label = document.createElement('div');
+            label.className = 'code-language-label';
+            label.textContent = lang;
+
+            pre.parentNode.insertBefore(wrapper, pre);
+            wrapper.appendChild(label);
+            wrapper.appendChild(pre);
+        }
+    });
+});
+</script>
+
 <body>
   <header>
   <div class="container">

@@ -18,6 +18,8 @@
     --color-text-dim: #888;
     --color-text-very-dim: #666;
     --color-text-comment: #5c6370;
+    --color-syntax-amber: #ffb454;
+    --color-syntax-highlight: #2a3340;
 
     /* Base colors */
     --color-white: #ffffff;
@@ -495,7 +497,6 @@ nav a:hover {
     content: "!";
 }
 
-/* TIP - Cyan */
 .markdown-alert-tip {
     border-color: var(--color-primary);
 }
@@ -508,7 +509,6 @@ nav a:hover {
     content: "★";
 }
 
-/* WARNING - Orange */
 .markdown-alert-warning {
     border-color: var(--color-accent-2);
 }
@@ -521,7 +521,6 @@ nav a:hover {
     content: "⚠";
 }
 
-/* IMPORTANT */
 .markdown-alert-important {
     border-color: var(--color-accent-3);
 }
@@ -534,7 +533,6 @@ nav a:hover {
     content: "‼";
 }
 
-/* CAUTION */
 .markdown-alert-caution {
     border-color: var(--color-error);
 }
