@@ -246,7 +246,8 @@ a:hover {
    HEADER & NAVIGATION
    ============================================ */
 header {
-    background: url("/images/title-banner.png") center center / cover no-repeat;
+    background: url("../images/title-banner.png") center center / cover
+        no-repeat;
     border-bottom: 2px solid var(--color-primary);
     padding: 1.5rem 0;
     margin-bottom: 2rem;

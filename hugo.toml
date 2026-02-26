@@ -34,6 +34,9 @@ paginate = 5
   # Default banner image if post doesn't specify one
   defaultBanner = "/images/default-banner.jpg"
 
+  # Number of words if no <!--more-->
+  summaryLength = 70
+
   # Social links (optional - uncomment and fill in as needed)
   # github = "hadella"
   # email = "justin.hadela@gmail.com"
