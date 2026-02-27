@@ -1,22 +1,10 @@
 <footer>
     <div class="container">
-        <p>
+        <p class="footer-text">
             &copy; {{ now.Format "2006" }} {{ .Site.Params.author | default
-            .Site.Title }} {{ if .Site.Params.github }} |
-            <a
-                href="https://github.com/{{ .Site.Params.github }}"
-                target="_blank"
-                rel="noopener"
-                >GitHub</a
-            >
-            {{ end }} {{ if .Site.Params.email }} |
-            <a href="mailto:{{ .Site.Params.email }}">Contact</a>
-            {{ end }}
-        </p>
-        <p style="font-size: 0.85rem; color: #555; margin-top: 0.5rem">
-            Powered by
+            .Site.Title }} &middot; Powered by
             <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
-            with Darklane theme
+            using the Darklane theme
         </p>
     </div>
 </footer>

@@ -196,6 +196,20 @@ ul ol {
     margin-bottom: 0.25rem;
 }
 
+/* List page styles */
+.list-header {
+    margin-bottom: 2rem;
+}
+
+.list-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.post-count {
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+}
+
 /* Force decimal on all nested ordered lists */
 .post-content ol ol {
     list-style-type: decimal !important;
@@ -778,18 +792,22 @@ pre code {
 footer {
     margin-top: 4rem;
     padding: 2rem 0;
-    border-top: 2px solid var(--color-bg-light);
+    border-top: 1px solid var(--color-bg-light);
+}
+
+.footer-text {
     text-align: center;
-    color: var(--color-text-very-dim);
-    font-size: 0.9rem;
-}
-
-footer a {
+    font-size: 0.85rem;
     color: var(--color-text-dim);
+    margin: 0;
 }
 
-footer a:hover {
-    color: var(--color-accent-2);
+.footer-text a {
+    color: var(--color-text-bright);
+}
+
+.footer-text a:hover {
+    color: var(--color-primary);
 }
 
 /* ============================================

@@ -10,7 +10,7 @@
 
     <!-- Show count of posts in this category/tag -->
     {{ if .Data.Pages }}
-    <p style="color: #888">
+    <p class="post-count">
         {{ len .Data.Pages }} {{ if eq (len .Data.Pages) 1 }}post{{ else
         }}posts{{ end }}
     </p>
