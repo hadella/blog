@@ -1,8 +1,0 @@
-{{- $type := .Get 0 | default "" | lower -}} {{- if eq $type "" -}}
-<div class="alert-box">{{ .Inner | markdownify }}</div>
-{{- else -}}
-<div class="alert alert-{{ $type }}">
-    <div class="alert-label">{{ $type }}</div>
-    <div class="alert-content">{{ .Inner | markdownify }}</div>
-</div>
-{{- end -}}
