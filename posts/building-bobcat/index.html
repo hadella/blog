@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+  <title>Bobcat: A Personal Link Directory | Justin Hadella&#39;s Blog</title>
+
+  
+  
+    <meta name="description" content="Your blog description">
+  
+
+  
+  
+    <meta name="author" content="Justin Hadella">
+  
+
+  
+  <meta property="og:title" content="Bobcat: A Personal Link Directory">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hadella.github.io/blog/posts/building-bobcat/">
+  
+
+  
+  <link rel="stylesheet" href="/blog/css/darklane.css">
+
+  
+  <link rel="stylesheet" href="/blog/css/syntax.css">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+        crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+          integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+          crossorigin="anonymous"></script>
+
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},   // Display math
+              {left: '$', right: '$', display: false}      // Inline math
+            ]
+          });"></script>
+
+  
+  </head>
+
+<body>
+  <header>
+    <div class="container">
+        <div class="site-header">
+            
+            <h1 class="site-title">
+                <a href="https://hadella.github.io/blog/">Justin Hadella&#39;s Blog</a>
+            </h1>
+
+            
+            <nav>
+                
+                <ul>
+                    
+                    <li>
+                        <a href="/blog/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/about/">About</a>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+  <div class="container">
+    <div class="main-content">
+      
+      <div class="content-column">
+        
+
+
+
+<article class="post">
+  
+  
+    
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+<div class="article-banner">
+    <img src="/blog/images/default-banner.jpg" alt="Bobcat: A Personal Link Directory" />
+    <h1 class="banner-title">Bobcat: A Personal Link Directory</h1>
+</div>
+
+  
+
+  
+  
+  <div class="post-meta">
+    <span>Published: February 27, 2025</span>
+
+    
+      <span>
+        Categories:
+        
+          
+          <a href="/categories/projects/">projects</a>
+        
+      </span>
+    
+
+    
+      <span>
+        Tags:
+        
+          
+          <a href="/tags/hugo/">hugo</a>
+        
+          , 
+          <a href="/tags/web/">web</a>
+        
+          , 
+          <a href="/tags/organization/">organization</a>
+        
+      </span>
+    
+  </div>
+  
+
+  
+  <div class="post-content">
+    <p>I built <a href="https://github.com/hadella/bobcat"><strong>bobcat</strong></a> as a personal link directory—a single page to organize all the websites I actually use, inspired by the link directories of the late 90s like Yahoo and DMOZ.</p>
+<h2 class="text-primary" id="the-problem">The Problem</h2>
+<p>Browser bookmarks pile up and become useless. You save something thinking you&rsquo;ll find it later, but eventually it just gets lost and buried. And over time, bookmarked links die. I wanted something simpler: one clean page with all my frequently-used links, organized by category, with search.</p>
+<h2 class="text-accent-2" id="what-it-is">What It Is</h2>
+<p>Bobcat is a Hugo site that reads link data from TOML files and generates a static directory page. The design is light and simple, similar to old web directories from the late 90s.</p>
+<p>Each category lives in its own data file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># data/links/game-dev.toml</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">link</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;raylib&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://www.raylib.com/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">desc</span> <span class="p">=</span> <span class="s2">&#34;raylib is a simple and easy-to-use library to enjoy videogames programming&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">added</span> <span class="p">=</span> <span class="s2">&#34;2026-03-25&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;clang&#34;</span><span class="p">,</span><span class="s2">&#34;game-programming&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">link</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Allegro&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">url</span> <span class="p">=</span> <span class="s2">&#34;https://liballeg.org/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">desc</span> <span class="p">=</span> <span class="s2">&#34;Allegro - A game programming library&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">added</span> <span class="p">=</span> <span class="s2">&#34;2026-03-25&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;clang&#34;</span><span class="p">,</span><span class="s2">&#34;game-programming&#34;</span><span class="p">]</span>
+</span></span></code></pre></div><p>Hugo builds these into a single page with fuzzy search powered by Fuse.js.</p>
+<h2 class="text-accent-1" id="why-this-works">Why This Works</h2>
+<p>What makes this interesting is using Hugo for something that&rsquo;s not a blog, portfolio, or product site. It&rsquo;s just a personal directory. The project is easily cloneable—anyone could fork it and customize the categories for their own use cases.</p>
+<p>I can imagine this being useful for niche collections. If you&rsquo;re into LEGO and frequently reference Rebrickable or Bricklink sets, you could organize hundreds of links by theme or part number and search by keyword instantly. Same idea for YouTube channels, documentation sites, or any specialized collection where bookmarks fall short.</p>
+<p>The key is curation. Right now I&rsquo;m still populating categories, and that&rsquo;s the real work—deciding what actually deserves a spot.</p>
+<h2 class="text-secondary" id="the-stack">The Stack</h2>
+<p>The tech side was straightforward (though I had help):</p>
+<ul>
+<li><a href="https://gohugo.io/"><strong>Hugo</strong></a> for static site generation</li>
+<li><a href="https://www.fusejs.io/"><strong>Fuse.js</strong></a> for client-side fuzzy search</li>
+<li><strong>Makefile</strong> for build and deploy commands</li>
+<li><strong>GitHub Pages</strong> for hosting</li>
+</ul>
+<p>I also added <a href="https://lychee.cli.rs/"><strong>lychee</strong></a> for dead link checking.</p>
+<div class="highlight-box highlight-warning">
+    <div class="highlight-label">
+        <span class="highlight-icon"></span>warning
+    </div>
+    <div class="highlight-content">Dead link checking has its own challenges—false positives and sites that block automated requests. Still working through the best approach&hellip;</div>
+</div>
+
+<h2 class="text-primary" id="see-it-in-action">See It In Action</h2>
+<figure class="img-figure" style="--img-width: 800px;">
+    <img src="images/bobcat-search.png" alt="Fuzzy search filtering links in real-time" /><figcaption>Fuzzy search filtering links in real-time</figcaption></figure>
+
+<p>The project is <a href="https://hadella.github.io/bobcat/">live</a> with the source code available on <a href="https://github.com/hadella/bobcat">GitHub</a>.</p>
+<figure class="img-figure" style="--img-width: 800px;">
+    <img src="images/bobcat-categories.png" alt="Links organized by category" /><figcaption>Links organized by category</figcaption></figure>
+
+<p>It&rsquo;s sparse right now, but functional.</p>
+<h2 class="text-accent-3" id="whats-useful">What&rsquo;s Useful</h2>
+<p>Having one page that loads instantly and shows everything is the point. No folders to dig through, no sync issues, no extensions. Just a search box and a list.</p>
+<p>If your bookmarks are a mess and you keep visiting the same 50 sites, this kind of setup might be worth trying.</p>
+  </div>
+</article>
+
+
+      </div>
+
+      
+      <aside class="sidebar-column">
+        
+
+
+<div class="sidebar-widget">
+  <h3>Recent Posts</h3>
+  <ul>
+    
+    
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/blog/posts/getting-started/">Getting Started</a>
+        <span class="recent-post-date">Mar 26, 2026</span>
+      </li>
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/blog/posts/building-bobcat/">Bobcat: A Personal Link Directory</a>
+        <span class="recent-post-date">Feb 27, 2025</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+<div class="sidebar-widget">
+  <h3>Categories</h3>
+  <ul>
+    
+    
+      <li class="taxonomy-item">
+        <a href="https://hadella.github.io/blog/categories/meta/">Meta</a>
+        <span class="taxonomy-count">1</span>
+      </li>
+    
+      <li class="taxonomy-item">
+        <a href="https://hadella.github.io/blog/categories/projects/">Projects</a>
+        <span class="taxonomy-count">1</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Tags</h3>
+  <div class="tag-cloud">
+    
+    
+      <a href="https://hadella.github.io/blog/tags/blogging/">Blogging</a>
+    
+      <a href="https://hadella.github.io/blog/tags/hugo/">Hugo</a>
+    
+      <a href="https://hadella.github.io/blog/tags/organization/">Organization</a>
+    
+      <a href="https://hadella.github.io/blog/tags/web/">Web</a>
+    
+      <a href="https://hadella.github.io/blog/tags/workflow/">Workflow</a>
+    
+  </div>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Archive</h3>
+  <ul>
+    
+    
+    
+      <li class="year-item">
+        <a href="/blog/posts/2025/">2025</a>
+        <span class="year-count">2</span>
+      </li>
+    
+      <li class="year-item">
+        <a href="/blog/posts/2026/">2026</a>
+        <span class="year-count">1</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+        <p class="footer-text">
+            &copy; 2026 Justin Hadella &middot; Powered by
+            <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+            using the Darklane theme
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

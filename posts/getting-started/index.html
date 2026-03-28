@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+  <title>Getting Started | Justin Hadella&#39;s Blog</title>
+
+  
+  
+    <meta name="description" content="Your blog description">
+  
+
+  
+  
+    <meta name="author" content="Justin Hadella">
+  
+
+  
+  <meta property="og:title" content="Getting Started">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hadella.github.io/blog/posts/getting-started/">
+  
+
+  
+  <link rel="stylesheet" href="/blog/css/darklane.css">
+
+  
+  <link rel="stylesheet" href="/blog/css/syntax.css">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+        crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+          integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+          crossorigin="anonymous"></script>
+
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},   // Display math
+              {left: '$', right: '$', display: false}      // Inline math
+            ]
+          });"></script>
+
+  
+  </head>
+
+<body>
+  <header>
+    <div class="container">
+        <div class="site-header">
+            
+            <h1 class="site-title">
+                <a href="https://hadella.github.io/blog/">Justin Hadella&#39;s Blog</a>
+            </h1>
+
+            
+            <nav>
+                
+                <ul>
+                    
+                    <li>
+                        <a href="/blog/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/about/">About</a>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+  <div class="container">
+    <div class="main-content">
+      
+      <div class="content-column">
+        
+
+
+
+<article class="post">
+  
+  
+    
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+<div class="article-banner">
+    <img src="/blog/images/default-banner.jpg" alt="Getting Started" />
+    <h1 class="banner-title">Getting Started</h1>
+</div>
+
+  
+
+  
+  
+  <div class="post-meta">
+    <span>Published: March 26, 2026</span>
+
+    
+      <span>
+        Categories:
+        
+          
+          <a href="/categories/meta/">meta</a>
+        
+      </span>
+    
+
+    
+      <span>
+        Tags:
+        
+          
+          <a href="/tags/hugo/">hugo</a>
+        
+          , 
+          <a href="/tags/blogging/">blogging</a>
+        
+          , 
+          <a href="/tags/workflow/">workflow</a>
+        
+      </span>
+    
+  </div>
+  
+
+  
+  <div class="post-content">
+    <p>Quick guide on how to create and test posts on the blog</p>
+<h2 class="text-primary" id="creating-a-new-post">Creating a New Post</h2>
+<p>Posts are created with Hugo&rsquo;s <code>new</code> command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new posts/my-post-name/index.md
+</span></span></code></pre></div><p>This creates a folder structure:</p>
+<pre tabindex="0"><code>content/posts/my-post-name/
+  index.md
+</code></pre><p>For posts requiring embedded images, we&rsquo;ll need to create that folder manually.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">mkdir content/posts/my-post-name/images
+</span></span></code></pre></div><p>The <code>images/</code> folder is where any screenshots or graphics for the post go. Keeps everything self-contained.</p>
+<h2 class="text-secondary" id="front-matter">Front Matter</h2>
+<p>Each post needs some metadata at the top:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Your Post Title&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2025-02-26</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">categories</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;category&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;tag1&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;tag2&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">banner</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;images/banner.jpg&#34;</span><span class="w">  </span><span class="c"># Optional</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">                  </span><span class="c"># Remove when ready to publish</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><p>The <code>&lt;!--more--&gt;</code> comment marks where the preview cuts off on the home page:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">This intro shows in previews.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--more--&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">This content only appears when you click through.
+</span></span></code></pre></div><h2 class="text-accent-2" id="testing-locally">Testing Locally</h2>
+<p>Run the Hugo development server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo server -D
+</span></span></code></pre></div><p>The <code>-D</code> flag includes draft posts. The site loads at <code>http://localhost:1313/blog/</code> and auto-reloads when you save changes.</p>
+<h2 class="text-accent-3" id="publishing">Publishing</h2>
+<p>When the post is ready:</p>
+<ol>
+<li>Remove <code>draft: true</code> from the front matter</li>
+<li>Run the publish script:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./publish.sh
+</span></span></code></pre></div><p>This builds the site and deploys to GitHub Pages. The blog updates in a couple minutes.</p>
+<h2 id="thats-it">That&rsquo;s It</h2>
+<p>The workflow is simple: create, write, test locally, publish.</p>
+  </div>
+</article>
+
+
+      </div>
+
+      
+      <aside class="sidebar-column">
+        
+
+
+<div class="sidebar-widget">
+  <h3>Recent Posts</h3>
+  <ul>
+    
+    
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/blog/posts/getting-started/">Getting Started</a>
+        <span class="recent-post-date">Mar 26, 2026</span>
+      </li>
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/blog/posts/building-bobcat/">Bobcat: A Personal Link Directory</a>
+        <span class="recent-post-date">Feb 27, 2025</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+<div class="sidebar-widget">
+  <h3>Categories</h3>
+  <ul>
+    
+    
+      <li class="taxonomy-item">
+        <a href="https://hadella.github.io/blog/categories/meta/">Meta</a>
+        <span class="taxonomy-count">1</span>
+      </li>
+    
+      <li class="taxonomy-item">
+        <a href="https://hadella.github.io/blog/categories/projects/">Projects</a>
+        <span class="taxonomy-count">1</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Tags</h3>
+  <div class="tag-cloud">
+    
+    
+      <a href="https://hadella.github.io/blog/tags/blogging/">Blogging</a>
+    
+      <a href="https://hadella.github.io/blog/tags/hugo/">Hugo</a>
+    
+      <a href="https://hadella.github.io/blog/tags/organization/">Organization</a>
+    
+      <a href="https://hadella.github.io/blog/tags/web/">Web</a>
+    
+      <a href="https://hadella.github.io/blog/tags/workflow/">Workflow</a>
+    
+  </div>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Archive</h3>
+  <ul>
+    
+    
+    
+      <li class="year-item">
+        <a href="/blog/posts/2025/">2025</a>
+        <span class="year-count">2</span>
+      </li>
+    
+      <li class="year-item">
+        <a href="/blog/posts/2026/">2026</a>
+        <span class="year-count">1</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+        <p class="footer-text">
+            &copy; 2026 Justin Hadella &middot; Powered by
+            <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+            using the Darklane theme
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
