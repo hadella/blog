@@ -25,7 +25,7 @@ paginate = 5
 
 # Site parameters
 [params]
-  description = "Your blog description"
+  description = "Justin Hadella's Blog"
   author = "Justin Hadella"
 
   # Number of recent posts to show in sidebar
@@ -36,10 +36,6 @@ paginate = 5
 
   # Number of words if no <!--more-->
   summaryLength = 70
-
-  # Social links (optional - uncomment and fill in as needed)
-  # github = "hadella"
-  # email = "justin.hadela@gmail.com"
 
 # Main menu configuration
 [menu]

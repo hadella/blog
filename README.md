@@ -1,139 +1,131 @@
-# Darklane Blog
+# Personal Blog
 
-A personal blog built with Hugo using a custom dark theme optimized for technical writing.
+A personal blog built with Hugo using the [Darklane theme](https://github.com/hadella/darklane)
 
-## Features
+See it [live](https://hadella.github.io/blog/)
 
-- **Dark Theme**: Deep blue-gray backgrounds with vibrant accent colors (orange, cyan, green, magenta)
-- **Code Highlighting**: Syntax highlighting for code blocks with Monokai dark theme
-- **LaTeX Support**: Write math equations with `$inline$` and `$$display$$` syntax
-- **Responsive Layout**: Two-column layout with sidebar (recent posts, categories, tags, year archive)
-- **Easy Publishing**: Simple deploy script to GitHub Pages
-- **Organized Content**: Each post in its own folder with co-located images
+## About
+
+This blog covers projects, technical experiments, and various interests. Posts are written in Markdown and deployed as static files to GitHub Pages.
+
+The Darklane theme provides a dark, minimal design optimized for technical writing with support for code highlighting, LaTeX math, custom shortcodes, and year-based archives.
 
 ## Quick Start
 
-### Prerequisites
+Quick guide on how to create and test posts on the blog.
 
-- Hugo extended version (0.112.0 or later)
-- Git
-- GitHub account for hosting
+### Creating a New Post
 
-### Installation
-
-1. Clone this repository
-2. Update `hugo.toml` with your settings:
-   - `baseURL`: Your GitHub Pages URL
-   - `title`: Your blog title
-   - `author`: Your name
-   - GitHub username for social links
-
-3. Update `publish.sh` with your repository details:
-   ```bash
-   git remote add origin git@github.com:yourusername/your-repo-name.git
-   ```
-
-### Writing a Post
-
-#### Create New Post
+Posts are created with Hugo's `new` command:
 
 ```bash
-hugo new posts/my-topic-name/index.md
+hugo new posts/my-post-name/index.md
 ```
 
-This creates:
+This creates a folder structure:
+
 ```
-content/posts/my-topic-name/
+content/posts/my-post-name/
   index.md
-  images/
 ```
 
-#### Front Matter Template
+For posts requiring embedded images, we'll need to create that folder manually.
+
+```bash
+mkdir content/posts/my-post-name/images
+```
+
+The `images/` folder is where any screenshots or graphics for the post go. Keeps everything self-contained.
+
+### Front Matter
+
+Each post needs some metadata at the top:
 
 ```yaml
 ---
 title: "Your Post Title"
-date: 2025-02-23
-categories: ["main-category"]
-tags: ["tag1", "tag2", "tag3"]
-banner: "images/banner.jpg"
+date: 2025-02-26
+categories: ["category"]
+tags: ["tag1", "tag2"]
+banner: "images/banner.jpg"  # Optional
+draft: true                  # Remove when ready to publish
 ---
 ```
 
-#### Content Structure
+The `<!--more-->` comment marks where the preview cuts off on the home page:
 
 ```markdown
-This is your intro paragraph visible on the home page.
+This intro shows in previews.
 
 <!--more-->
 
-This content only shows on the full post page.
-
-## Your Section
-
-Write your content here...
+This content only appears when you click through.
 ```
 
-#### Code Blocks
+### Testing Locally
 
-Use triple backticks with language identifier:
-
-\`\`\`python
-def example():
-    return "Hello, world!"
-\`\`\`
-
-#### Math with LaTeX
-
-- Inline: `$E = mc^2$`
-- Display: `$$\int_{0}^{\infty} e^{-x} dx = 1$$`
-
-#### Images
-
-Place images in `images/` folder within your post directory:
-
-```markdown
-![Alt text](images/photo.jpg)
-```
-
-### Preview Locally
+Run the Hugo development server:
 
 ```bash
 hugo server -D
 ```
 
-Visit `http://localhost:1313` to see your site. Auto-reloads on file changes.
+The `-D` flag includes draft posts. The site loads at `http://localhost:1313/blog/` and auto-reloads when you save changes.
 
-### Publish to GitHub Pages
+## Publishing
+
+When the post is ready:
+
+1. Remove `draft: true` from the front matter
+2. Run the publish script:
 
 ```bash
 ./publish.sh
 ```
 
-This builds the site and pushes to the `gh-pages` branch.
+This builds the site and deploys to GitHub Pages. The blog updates in a couple minutes.
+
+### That's It
+
+The workflow is simple: create, write, test locally, publish.
+
+---
+
+## Theme Management
+
+This blog uses Darklane as a git submodule, which keeps the theme separate from the blog content and allows easy updates.
+
+### Updating the Theme
+
+When the Darklane theme gets updates (bug fixes, new features, etc.), pull them into your blog:
+```bash
+cd themes/darklane
+git pull origin main
+cd ../..
+git add themes/darklane
+git commit -m "Update Darklane theme to latest version"
+git push
+```
+
+### Theme Documentation
+
+For theme customization, shortcode usage, and configuration options, see the [Darklane repository](https://github.com/hadella/darklane).
 
 ## Configuration
 
-### Site Settings (`hugo.toml`)
-
+Key settings in `hugo.toml`:
 ```toml
-baseURL = "https://yourusername.github.io/repo/"
+baseURL = "https://yourname.github.io/blog/"
 title = "Your Blog Title"
 theme = "darklane"
-paginate = 5  # Posts per page
+paginate = 5
 
 [params]
-  description = "Your blog description"
   author = "Your Name"
+  description = "Blog description"
   recentPostsCount = 5
-  defaultBanner = "/images/default-banner.jpg"
-```
+  defaultBanner = "images/default-banner.jpg"
 
-### Menu Items
-
-Add pages to the navigation menu:
-
-```toml
 [[menu.main]]
   name = "Home"
   url = "/"
@@ -145,113 +137,53 @@ Add pages to the navigation menu:
   weight = 2
 ```
 
-### Banner Images
+### Important Settings
 
-Three ways to set banner images:
+- **baseURL**: Must match your GitHub Pages URL exactly (include `/blog/` if repo name is "blog")
+- **theme**: Must be "darklane" to use the submodule
+- **paginate**: Controls posts per page on home page
+- **defaultBanner**: Fallback image for posts without specific banners
 
-1. **Per-post**: Specify in front matter
-   ```yaml
-   banner: "images/my-banner.jpg"
-   ```
-
-2. **Category default**: Place image at `static/images/banners/{category-name}.jpg`
-
-3. **Site default**: Set in `hugo.toml`
-   ```toml
-   [params]
-     defaultBanner = "/images/default-banner.jpg"
-   ```
-
-## File Organization
-
+## File Structure
 ```
-your-blog-repo/
-├── hugo.toml              # Site configuration
-├── publish.sh             # Deploy script
-├── README.md              # This file
+blog/
 ├── content/
-│   ├── about.md           # About page
-│   └── posts/             # All blog posts
+│   ├── about.md
+│   └── posts/
 │       └── post-name/
 │           ├── index.md
 │           └── images/
 ├── static/
-│   └── images/            # Site-wide images
-│       ├── default-banner.jpg
-│       └── banners/       # Category default banners
-└── themes/
-    └── darklane/          # Theme files
-        ├── layouts/       # HTML templates
-        └── static/css/    # Stylesheets
+│   └── images/
+├── themes/
+│   └── darklane/        # Git submodule
+├── hugo.toml
+├── publish.sh           # Deployment script
+└── README.md
 ```
 
-## Theme Customization
+Each post lives in its own folder under `content/posts/` with co-located images. This keeps everything organized and makes posts portable.
 
-### Colors
+## Publishing
 
-Edit `themes/darklane/static/css/darklane.css`:
-
-```css
-/* Main colors defined at top of file */
-background: #0a0f14
-text: #BFBDB6
-accent-orange: #FF8F40
-accent-cyan: #39BAE6
-accent-green: #26a98b
-accent-magenta: #C678DD
-```
-
-### Layout
-
-Modify these files in `themes/darklane/layouts/`:
-
-- `_default/baseof.html`: Master template
-- `index.html`: Home page
-- `_default/single.html`: Individual posts
-- `partials/sidebar.html`: Sidebar widgets
-- `partials/header.html`: Site header
-
-## GitHub Pages Setup
-
-1. Go to repository Settings → Pages
-2. Source: Deploy from branch
-3. Branch: `gh-pages` / `root`
-4. Save
-
-Your site will be live at `https://yourusername.github.io/repo-name/`
-
-## Tips
-
-- **Draft posts**: Add `draft: true` to front matter to hide posts
-- **Post URLs**: Hugo converts post folder names to URLs (e.g., `my-topic-name` → `/posts/my-topic-name/`)
-- **Categories vs Tags**: Categories for broad topics, tags for specifics
-- **Image optimization**: Compress images before adding to keep site fast
-
-## Troubleshooting
-
-### Site not building
-
+The `publish.sh` script handles deployment:
 ```bash
-hugo version  # Check Hugo is installed
-hugo --verbose  # See detailed build output
+./publish.sh
 ```
 
-### Deploy failing
+This:
+1. Runs `hugo` to build the site into `public/`
+2. Commits the built site to the `gh-pages` branch
+3. Pushes to GitHub
 
-Check `publish.sh` has correct repository URL and your SSH keys are set up:
+GitHub Pages serves from the `gh-pages` branch. Site updates appear within a few minutes.
 
-```bash
-ssh -T git@github.com
-```
+### GitHub Pages Setup
 
-### Styling issues
-
-Clear your browser cache or test in incognito mode.
+Repository Settings → Pages:
+- Source: Deploy from a branch
+- Branch: gh-pages / (root)
 
 ## License
 
-This blog structure and Darklane theme are free to use and modify.
-
----
-
-**Built with [Hugo](https://gohugo.io/) • Powered by [GitHub Pages](https://pages.github.com/)**
+Content is my own. Theme is [Darklane](https://github.com/hadella/darklane) under MIT license.

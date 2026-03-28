@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/tags/blogging/</loc>
+    <loc>https://hadella.github.io/blog/tags/blogging/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/</loc>
+    <loc>https://hadella.github.io/blog/categories/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/getting-started/</loc>
+    <loc>https://hadella.github.io/blog/posts/getting-started/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/hugo/</loc>
+    <loc>https://hadella.github.io/blog/tags/hugo/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://hadella.github.io/blog/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/meta/</loc>
+    <loc>https://hadella.github.io/blog/categories/meta/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/</loc>
+    <loc>https://hadella.github.io/blog/posts/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
+    <loc>https://hadella.github.io/blog/tags/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/workflow/</loc>
+    <loc>https://hadella.github.io/blog/tags/workflow/</loc>
     <lastmod>2026-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/building-bobcat/</loc>
+    <loc>https://hadella.github.io/blog/posts/building-bobcat/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/organization/</loc>
+    <loc>https://hadella.github.io/blog/tags/organization/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/projects/</loc>
+    <loc>https://hadella.github.io/blog/categories/projects/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/web/</loc>
+    <loc>https://hadella.github.io/blog/tags/web/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/about/</loc>
+    <loc>https://hadella.github.io/blog/about/</loc>
     <lastmod>2025-02-23T00:00:00+00:00</lastmod>
   </url>
 </urlset>
