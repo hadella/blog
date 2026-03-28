@@ -1,0 +1,3 @@
+[submodule "themes/darklane"]
+	path = themes/darklane
+	url = https://github.com/hadella/darklane.git

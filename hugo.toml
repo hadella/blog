@@ -32,7 +32,7 @@ paginate = 5
   recentPostsCount = 5
 
   # Default banner image if post doesn't specify one
-  defaultBanner = "/images/default-banner.jpg"
+  defaultBanner = "images/default-banner.jpg"
 
   # Number of words if no <!--more-->
   summaryLength = 70
