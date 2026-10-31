@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mega65 on Justin Hadella&#39;s Blog</title>
+    <link>https://hadella.github.io/blog/tags/mega65/</link>
+    <description>Recent content in Mega65 on Justin Hadella&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hadella.github.io/blog/tags/mega65/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What I Want From a Retro Machine</title>
+      <link>https://hadella.github.io/blog/posts/what-i-want-from-a-retro-machine/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://hadella.github.io/blog/posts/what-i-want-from-a-retro-machine/</guid>
+      <description>&lt;p&gt;My problem is that I&amp;rsquo;m hardly picky. So I tried to narrow it down: Mega Drive-class graphics, no&#xA;line numbers, and hardware I can actually PEEK and POKE. Here&amp;rsquo;s how the X16, MEGA65, C64U, and&#xA;Agon stack up, and why I&amp;rsquo;m probably starting with a 6502 on a breadboard anyway.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Purity Was Never Real</title>
+      <link>https://hadella.github.io/blog/posts/purity-was-never-real/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://hadella.github.io/blog/posts/purity-was-never-real/</guid>
+      <description>&lt;p&gt;Some retro fans say FPGAs ruin the hobby, and that the C64U is killing it. But the machines they&#xA;love were built on custom chips and programmable logic from day one, and the 8-bit world was never&#xA;one big happy family. Here&amp;rsquo;s my take on the purity arguments, and why most of them judge the wrong&#xA;thing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

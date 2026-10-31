@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+  <title>What I Want From a Retro Machine | Justin Hadella&#39;s Blog</title>
+
+  
+  
+    <meta name="description" content="Justin Hadella&#39;s Blog">
+  
+
+  
+  
+    <meta name="author" content="Justin Hadella">
+  
+
+  
+  <meta property="og:title" content="What I Want From a Retro Machine">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hadella.github.io/blog/posts/what-i-want-from-a-retro-machine/">
+  
+
+  
+  <link rel="stylesheet" href="/blog/css/darklane.css">
+
+  
+  <link rel="stylesheet" href="/blog/css/syntax.css">
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+        crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+          integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+          crossorigin="anonymous"></script>
+
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+          crossorigin="anonymous"
+          onload="renderMathInElement(document.body, {
+            delimiters: [
+              {left: '$$', right: '$$', display: true},   // Display math
+              {left: '$', right: '$', display: false}      // Inline math
+            ]
+          });"></script>
+
+  
+  </head>
+
+<body>
+  <header>
+    <div class="container">
+        <div class="site-header">
+            
+            <h1 class="site-title">
+                <a href="https://hadella.github.io/blog/">Justin Hadella&#39;s Blog</a>
+            </h1>
+
+            
+            <nav>
+                
+                <ul>
+                    
+                    <li>
+                        <a href="/blog/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/about/">About</a>
+                    </li>
+                    
+                </ul>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+  <div class="container">
+    <div class="main-content">
+      
+      <div class="content-column">
+        
+
+
+
+<article class="post">
+  
+  
+    
+
+
+
+
+  
+
+
+<div class="article-banner">
+    <img src="/blog/images/default-banner.jpg" alt="What I Want From a Retro Machine" />
+    <h1 class="banner-title">What I Want From a Retro Machine</h1>
+</div>
+
+  
+
+  
+  
+  <div class="post-meta">
+    <span>Published: October 27, 2026</span>
+
+    
+
+    
+      <span>
+        Tags:
+        
+          
+          <a href="/tags/retro-computing/">retro-computing</a>
+        
+          , 
+          <a href="/tags/6502/">6502</a>
+        
+          , 
+          <a href="/tags/x16/">x16</a>
+        
+          , 
+          <a href="/tags/ben-eater/">ben-eater</a>
+        
+          , 
+          <a href="/tags/mega65/">mega65</a>
+        
+          , 
+          <a href="/tags/c64u/">c64u</a>
+        
+          , 
+          <a href="/tags/basic/">basic</a>
+        
+      </span>
+    
+  </div>
+  
+
+  
+  <div class="post-content">
+    <p>My problem is that I&rsquo;m hardly picky. So I tried to narrow it down: Mega Drive-class graphics, no
+line numbers, and hardware I can actually PEEK and POKE. Here&rsquo;s how the X16, MEGA65, C64U, and
+Agon stack up, and why I&rsquo;m probably starting with a 6502 on a breadboard anyway.</p>
+<p>My last post was about the arguments: purity, playback machines versus new platforms, and who&rsquo;s
+supposedly killing the hobby. This one&rsquo;s personal.</p>
+<p>I&rsquo;d happily play almost anything on almost anything, and for the machines I have no nostalgia
+for, a playback box with extras is great. The MEGA65 can even load other cores and become other
+machines.</p>
+<p>So if I&rsquo;m going to build or program something, what do I actually want?</p>
+<h2 class="text-primary" id="what-im-looking-for">What I&rsquo;m Looking For</h2>
+<ul>
+<li><strong>Graphics With Flair</strong><br>
+My baseline tolerance for old graphics is the NES. Even the Atari and C64 look really dated to
+me now, and anything without scrolling, like the TMS9918, is a no. The Mega Drive is about where
+I&rsquo;d set the bar for retro graphics. I like that the X16 and MEGA65 try to do better than the
+machines that inspired them.</li>
+<li><strong>Instant On, With A Readable Language</strong><br>
+The appeal of flipping a switch and landing at a prompt is real. But most old BASIC is hard to
+read. I&rsquo;d take a more modern approach like QuickBASIC or MMBasic over line numbers any day.
+Commodore&rsquo;s BASIC was more basic than it should have been.</li>
+<li><strong>Assembly And A Monitor</strong><br>
+For an 8-bit machine, assembly and something like Wozmon are a must. Otherwise, why not just
+write C with raylib on a PC?</li>
+<li><strong>Hardware I Can Reach</strong><br>
+People forget how narrow interfacing got on PCs and Macs compared to the old Commodore and Apple
+machines. I want to PEEK and POKE, and control external hardware. Whether the CPU is &ldquo;real&rdquo;
+matters less; put it in a case and who could tell?</li>
+</ul>
+<h2 class="text-accent-2" id="the-candidates">The Candidates</h2>
+<ul>
+<li><strong>Commander X16:</strong><br>
+VERA clears my graphics bar, there&rsquo;s a built-in monitor, and expansion slots for hardware. The
+stock BASIC is line-numbered Commodore BASIC V2 with extensions, but BASLOAD helps: you write
+BASIC in a text file with labels instead of line numbers, and it adds the numbers when it loads.
+Underneath it&rsquo;s still line-numbered BASIC, but you don&rsquo;t have to look at it. Of everything here,
+the builder kit has the most appeal.</li>
+<li><strong>OtterX:</strong><br>
+Another X16, and the designer claims some improvements. But it loses the Apple II feel the
+original has.</li>
+<li><strong>MEGA65:</strong><br>
+Cool, with strong graphics, extra cores, and a better BASIC than the C64 had, though still
+line-numbered. At around $840 it&rsquo;s a hefty price. And I question the built-in disk drive. It
+reminds me of the TI-99/4A cup-warmer look, and a 3.5&quot; drive feels odd on a Commodore, even
+if the C65 planned one.</li>
+<li><strong>C64U:</strong><br>
+Legit, and relatively affordable. You get a virtual disk drive but can hook up physical ones
+too, and I&rsquo;m sure it can do more than games. I&rsquo;m not aware of any true enhancements, though
+dual SID would be cool, and the stock C64 couldn&rsquo;t do that.</li>
+<li><strong>Agon Light 2:</strong><br>
+Small and cheap, and the hardware is fine. But growing up in the US, I&rsquo;d never heard of BBC
+BASIC or the BBC Micro until recently, so there&rsquo;s no nostalgia there. The serial-link video
+was pitched as a take on the Atari&rsquo;s approach, but it&rsquo;s a weird division of labor. And the
+Z80&rsquo;s appeal was a long-lived through-hole DIP part, which is gone now; the Agon&rsquo;s eZ80 is
+surface mount anyway. For me, Z80 machines like the Coleco, Spectrum, SMS, and MSX are all
+from an alternate universe. If I wanted to go that way, plenty of RC2014 projects appeal to
+me more than the Agon.</li>
+</ul>
+<h2 class="text-accent-1" id="where-im-headed">Where I&rsquo;m Headed</h2>
+<p>The X16 appeals because it&rsquo;s the logical next step from Ben Eater&rsquo;s kit: same W65C02, same W65C22,
+same kind of glue logic, plus some special sauce, and it boots real Commodore BASIC V2. BASLOAD
+and Prog8 are both on my list to try.</p>
+<p>But if the X16 is Ben Eater&rsquo;s kit grown up, I&rsquo;d rather start closer to the metal. I&rsquo;ve been
+6502-curious since I read the KIM-1 manual years ago, and it&rsquo;s the chip behind the Atari, the C64,
+the Apple II, and the NES. Any finished system, the X16 included, ties you to its ecosystem, and
+some of its design choices get abstracted away. Building up from the chip, I make those choices
+myself.</p>
+<p>I might combine the two. If I build Ben&rsquo;s 6502, VERA is sold as a standalone module, and adapter
+boards already exist to put it on a 65C02 bus. The catch is address decoding. Ben&rsquo;s design decodes
+coarsely with one 74HC00, so carving out a window for VERA&rsquo;s registers takes some rework. That&rsquo;s
+a good exercise in its own right.</p>
+<p>So the plan is Ben Eater&rsquo;s kit first, then VERA on top of it. The one worry is the X16 itself.
+In some recent 8-Bit Guy videos, David Murray has started showing Stage-2 prototypes and has
+previously griped about sourcing some parts, so the original developer kit may get harder to
+find. If I want the original design, I shouldn&rsquo;t dick around too long.</p>
+  </div>
+</article>
+
+
+      </div>
+
+      
+      <aside class="sidebar-column">
+        
+
+
+<div class="sidebar-widget">
+  <h3>Recent Posts</h3>
+  <ul>
+    
+    
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/blog/posts/what-i-want-from-a-retro-machine/">What I Want From a Retro Machine</a>
+        <span class="recent-post-date">Oct 27, 2026</span>
+      </li>
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/blog/posts/purity-was-never-real/">Purity Was Never Real</a>
+        <span class="recent-post-date">Oct 11, 2026</span>
+      </li>
+    
+      <li class="recent-post-item">
+        <a href="https://hadella.github.io/blog/posts/building-bobcat/">Bobcat: A Personal Link Directory</a>
+        <span class="recent-post-date">Feb 27, 2025</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+<div class="sidebar-widget">
+  <h3>Categories</h3>
+  <ul>
+    
+    
+      <li class="taxonomy-item">
+        <a href="https://hadella.github.io/blog/categories/projects/">Projects</a>
+        <span class="taxonomy-count">1</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Tags</h3>
+  <div class="tag-cloud">
+    
+    
+      <a href="https://hadella.github.io/blog/tags/6502/">6502</a>
+    
+      <a href="https://hadella.github.io/blog/tags/basic/">Basic</a>
+    
+      <a href="https://hadella.github.io/blog/tags/ben-eater/">Ben-Eater</a>
+    
+      <a href="https://hadella.github.io/blog/tags/c64/">C64</a>
+    
+      <a href="https://hadella.github.io/blog/tags/c64u/">C64u</a>
+    
+      <a href="https://hadella.github.io/blog/tags/fpga/">Fpga</a>
+    
+      <a href="https://hadella.github.io/blog/tags/hugo/">Hugo</a>
+    
+      <a href="https://hadella.github.io/blog/tags/mega65/">Mega65</a>
+    
+      <a href="https://hadella.github.io/blog/tags/opinion/">Opinion</a>
+    
+      <a href="https://hadella.github.io/blog/tags/organization/">Organization</a>
+    
+      <a href="https://hadella.github.io/blog/tags/preservation/">Preservation</a>
+    
+      <a href="https://hadella.github.io/blog/tags/retro-computing/">Retro-Computing</a>
+    
+      <a href="https://hadella.github.io/blog/tags/web/">Web</a>
+    
+      <a href="https://hadella.github.io/blog/tags/x16/">X16</a>
+    
+  </div>
+</div>
+
+
+
+
+<div class="sidebar-widget">
+  <h3>Archive</h3>
+  <ul>
+    
+    
+    
+      <li class="year-item">
+        <a href="/blog/posts/2025/">2025</a>
+        <span class="year-count">2</span>
+      </li>
+    
+      <li class="year-item">
+        <a href="/blog/posts/2026/">2026</a>
+        <span class="year-count">2</span>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+        <p class="footer-text">
+            &copy; 2026 Justin Hadella &middot; Powered by
+            <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+            using the Darklane theme
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
